@@ -3,8 +3,6 @@ const config = require("./webpack.common.config");
 // плагин для извлечения стилей в отдельные файлы
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-// const postcssPresetEnv = require('postcss-preset-env');
-
 module.exports = merge.smart(config, {
     mode: "production",
     module: {
@@ -17,13 +15,6 @@ module.exports = merge.smart(config, {
             },
 
             // стили в production выносим в отдельный файл
-            /*{
-                test: /\.scss$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader"
-                ]
-            }*/
 
             {
                 test: /\.(sa|sc|c)ss$/,
